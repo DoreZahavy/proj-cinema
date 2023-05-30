@@ -1,0 +1,136 @@
+.colors {
+    color: #761818;
+    color: orange;
+    color: red;
+    color: aliceblue;
+    color: blueviolet;
+    color: gray;
+    color: #111;
+    color: white;
+}
+
+* {
+
+    box-sizing: border-box;
+}
+
+:root {
+    --clrBG: #111;
+    --clrBook: #761818;
+    --clrSelect: orange;
+    --clrChairs: red;
+    --clrHighlight: aliceblue;
+    --clrLight: blueviolet;
+    --clrNoZone: gray;
+    --clrWhite: white;
+}
+
+body {
+    background: var(--clrBG);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--clrWhite);
+}
+
+h1 {
+    text-align: center;
+
+    text-shadow: 4px 6px 8px var(--clrChairs);
+    /* color: var(--clrBook); */
+
+
+}
+
+
+
+.cinema {
+    width: 600px;
+    margin: 60px auto;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.cell {
+    transition: 1s;
+    width: 35px;
+    height: 50px;
+    border-radius: 7px;
+}
+
+.seat {
+    background-color: var(--clrBook);
+    cursor: pointer;
+}
+
+.selected {
+    background-color: var(--clrSelect);
+}
+
+.booked {
+    background-color: var(--clrChairs);
+}
+
+.highlight {
+    background-color: var(--clrHighlight);
+    border: 4px solid var(--clrLight);
+}
+
+.seat.booked:hover {
+    background-color: var(--clrNoZone);
+    cursor: not-allowed;
+}
+.seat.booked:active {
+    background-color: var(--clrBG);
+    cursor: not-allowed;
+}
+.seat:hover {
+    background-color: var(--clrLight);
+}
+.seat.selected:hover {
+    background-color: var(--clrSelect);
+}
+
+.popup {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border-radius: 20px;
+    background-color: var(--clrSelect);
+    padding: 20px;
+
+    box-shadow: 14px 13px 12px 0px var(--clrNoZone);
+    -webkit-box-shadow: 14px 13px 12px 0px var(--clrNoZone);
+    -moz-box-shadow: 14px 13px 12px 0px var(--clrNoZone);
+}
+
+.popup .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--clrBook);
+
+    /* background-color: transparent; */
+    border: 1px solid var(--clrWhite);
+    color: var(--clrWhite);
+    cursor: pointer;
+}
+
+.btn-book-seat {
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-light {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.btn-light:active {
+    background-color: var(--clrLight);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
